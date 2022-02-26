@@ -1,18 +1,9 @@
-version: '3'
+version: "3"
 services:
-  tbs-build:
-    container_name: tbs-build
+  tbs-site:
+    container_name: tbs-site
     build:
       context: ./
     ports:
       - 80:80
-    volumes:
-      - tbs-sites-volume:/app/dist/spa
     restart: always
-    networks:
-      - info-sites
-
-volumes:
-  tbs-sites-volume:
-networks:
-  info-sites:
